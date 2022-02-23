@@ -31,21 +31,33 @@ namespace RockPaperSciss.Model
       string result = "";
       if((Player1Move=="Rock")&&(Player2Move=="Scissors"))
       {
-      result= "Player 1 Wins";
+        result= "Player 1 Wins";
+      } else if((Player1Move=="Paper")&&(Player2Move=="Rock"))
+      {
+        result= "Player 1 Wins";
+      }
+      else if((Player1Move=="Scissors")&&(Player2Move=="Paper"))
+      {
+        result= "Player 1 Wins";
+      }
+        else if((Player1Move=="Scissors")&&(Player2Move=="Rock"))
+      {
+        result= "Player 2 Wins";
+      }
+      else if((Player1Move=="Rock")&&(Player2Move=="Paper"))
+      {
+        result= "Player 2 Wins";
+      }
+      else if((Player1Move=="Paper")&&(Player2Move=="Scissors"))
+      {
+        result= "Player 2 Wins";
+      }
+      else if (Player1Move==Player2Move)
+      {
+        result= "Draw!";
       }
       return result;
-      //  if((Player1Move==rock)&&(Player2Move==Scissor)
-      // {
-      // return "Player 1 Wins";
-      // }
-      //  if((Player1Move==rock)&&(Player2Move==Scissor)
-      // {
-      // return "Player 1 Wins";
-      // }
-      //  if((Player1Move==rock)&&(Player2Move==Scissor)
-      // {
-      // return "Player 1 Wins";
-      // }
+
       
     }
   }
