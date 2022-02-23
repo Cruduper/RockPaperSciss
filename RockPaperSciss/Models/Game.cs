@@ -10,8 +10,8 @@ using System;
 
 
 // [TestMethod]
-// CheckWhenPlayer1HasRockAndPlayer2HasScissor_Player1Wins
-// Assert("Player 1 Wins", myGame.CheckForWinner("Rock","Scissor")
+// CheckWhenPlayer1HasROCKAndPlayer2HasScissor_Player1Wins
+// Assert("Player 1 Wins", myGame.CheckForWinner("ROCK","Scissor")
 
 
 namespace RockPaperSciss.Model
@@ -29,32 +29,36 @@ namespace RockPaperSciss.Model
     public string ReturnWinner()
     {
       string result = "";
-      if((Player1Move=="Rock")&&(Player2Move=="Scissors"))
+      if((Player1Move=="ROCK")&&(Player2Move=="SCISSORS"))
       {
         result= "Player 1 Wins";
-      } else if((Player1Move=="Paper")&&(Player2Move=="Rock"))
-      {
-        result= "Player 1 Wins";
-      }
-      else if((Player1Move=="Scissors")&&(Player2Move=="Paper"))
+      } else if((Player1Move=="PAPER")&&(Player2Move=="ROCK"))
       {
         result= "Player 1 Wins";
       }
-        else if((Player1Move=="Scissors")&&(Player2Move=="Rock"))
+      else if((Player1Move=="SCISSORS")&&(Player2Move=="PAPER"))
+      {
+        result= "Player 1 Wins";
+      }
+        else if((Player1Move=="SCISSORS")&&(Player2Move=="ROCK"))
       {
         result= "Player 2 Wins";
       }
-      else if((Player1Move=="Rock")&&(Player2Move=="Paper"))
+      else if((Player1Move=="ROCK")&&(Player2Move=="PAPER"))
       {
         result= "Player 2 Wins";
       }
-      else if((Player1Move=="Paper")&&(Player2Move=="Scissors"))
+      else if((Player1Move=="PAPER")&&(Player2Move=="SCISSORS"))
       {
         result= "Player 2 Wins";
       }
       else if (Player1Move==Player2Move)
       {
         result= "Draw!";
+      }
+      else
+      {
+        result= "Someone input something weird!";
       }
       return result;
 
